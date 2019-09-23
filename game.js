@@ -25,12 +25,7 @@ var wall = new PIXI.Sprite(PIXI.Texture.fromImage("wall.png"))
 wall.position.x = 10;
 wall.position.y = 0;
 stage.addChild(wall);
-//let environment = new PIXI.Graphics();
-/*someContainer.addChild(environment);
-environment.position.set(startPoint.x,startPoint.y);
-environment.lineStyle(thickness, 0xffffff)
-.moveTo(0,0)
-.lineTo(endPoint.x,endPoint.y)*/
+
 hero.health = 100;
 hero.position.x = 100;
 hero.position.y = 100;
@@ -195,9 +190,6 @@ function GameLoop()
 	b.hit(hero, wall13, true);
 	b.hit(hero, wall14, true);
 	b.hit(hero, wall15, true);
-	//b.hit(hero, wall6, true);
-	//b.hit(hero, wall7, true);
-	//b.hit(hero, wall8, true);
 	for(let i=0;i<mice.length;i++)
 	{
 			
@@ -239,25 +231,25 @@ function destroy(character)
 function keydownEventHandler(e) {
 
   if (e.keyCode == 87) 
-  { // W key
+  { 
     hero.position.y -= 5;
 	console.log(hero.position.y);
 	console.log(hero.position.x);
   }
 
-  if (e.keyCode == 83) { // S key
+  if (e.keyCode == 83) { 
     hero.position.y += 5;
 	console.log(hero.position.y);
 	console.log(hero.position.x);
   }
 
-  if (e.keyCode == 65) { // A key
+  if (e.keyCode == 65) { 
     hero.position.x -= 5;
 	console.log(hero.position.y);
 	console.log(hero.position.x);
   }
 
-  if (e.keyCode == 68) { // D key
+  if (e.keyCode == 68) { 
     hero.position.x += 5;
 	console.log(hero.position.y);
 	console.log(hero.position.x);
@@ -282,4 +274,4 @@ function animate() {
   renderer.render(stage);	
 }
 GameLoop();
-animate();2131231
+animate();
